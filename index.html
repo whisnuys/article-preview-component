@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Article preview component</title>
+
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <!-- FontAwesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/90cefb858d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="card-container">
+        <div class="img-wrapper"></div>
+        <div class="content">
+          <h2>
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h2>
+          <p>
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+          <div class="content-footer">
+            <div class="profile">
+              <img
+                src="./images/avatar-michelle.jpg"
+                class="avatar"
+                alt="Michelle Avatar"
+              />
+              <div class="profile-detail">
+                <p class="name">Michelle Appleton</p>
+                <p class="date">28 Jun 2020</p>
+              </div>
+            </div>
+            <div class="share-wrapper">
+              <ul>
+                <div class="link-social">
+                  <span>Share</span>
+                  <li class="social">
+                    <a href="#" class="fab fa-facebook-square"></a>
+                  </li>
+                  <li class="social">
+                    <a href="#" class="fab fa-twitter"></a>
+                  </li>
+                  <li class="social">
+                    <a href="#" class="fab fa-pinterest"></a>
+                  </li>
+                </div>
+                <div class="icon-share-mobile">
+                  <i class="fas fa-share"></i>
+                </div>
+              </ul>
+            </div>
+            <div class="tooltip">
+              <ul class="link-social">
+                <span>Share</span>
+                <li class="social">
+                  <a href="#" class="fab fa-facebook-square"></a>
+                </li>
+                <li class="social">
+                  <a href="#" class="fab fa-twitter"></a>
+                </li>
+                <li class="social">
+                  <a href="#" class="fab fa-pinterest"></a>
+                </li>
+              </ul>
+              <div class="arrow-down"></div>
+            </div>
+            <div class="icon-share"><i class="fas fa-share"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+    <script>
+      const iconElMobile = document.querySelector(".icon-share-mobile");
+      const iconElDesktop = document.querySelector(".icon-share");
+      const shareWrapper = document.querySelector(".share-wrapper");
+      const tooltip = document.querySelector(".tooltip");
+
+      iconElMobile.addEventListener("click", () => {
+        shareWrapper.classList.toggle("open");
+      });
+
+      iconElDesktop.addEventListener("click", () => {
+        iconElDesktop.classList.toggle("triggered");
+        if (tooltip.style.display == "block") {
+          tooltip.style.display = "none";
+        } else {
+          tooltip.style.display = "block";
+        }
+      });
+    </script>
+  </body>
+</html>
